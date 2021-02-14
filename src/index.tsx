@@ -1,25 +1,27 @@
+/// <reference types="@types/hookrouter" />
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'hookrouter';
 // import reportWebVitals from './maintenance/reportWebVitals';
-import HomeView from './views/HomeView';
-import ExampleSitesView from './views/ExampleSitesView';
-import ComponentsView from './views/ComponentsView';
-import DocsView from './views/DocsView';
-import NotFoundPageView from './views/NotFoundPageView';
+
+// import HomeView from './views/HomeView';
+// import ExampleSitesView from './views/ExampleSitesView';
+// import ComponentsView from './views/ComponentsView';
+// import DocsView from './views/DocsView';
+// import NotFoundPageView from './views/NotFoundPageView';
 
 import './style.scss';
 
-interface Routes {
-  [route: string]: () => JSX.Element
-};
+// interface Routes {
+//   [route: string]: () => JSX.Element;
+// }
 
-const routes: Routes = {
-  "/": () => <HomeView />,
-  "/example-sites": () => <ExampleSitesView />,
-  "/components": () => <ComponentsView />,
-  "/docs": () => <DocsView />,
-};
-
+// const routes: Routes = {
+//   "/": () => <HomeView />,
+//   "/example-sites": () => <ExampleSitesView />,
+//   "/components": () => <ComponentsView />,
+//   "/docs": () => <DocsView />,
+// };
 
 export function App() {
   return <div className="App">hi</div>;
