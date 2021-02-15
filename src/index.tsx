@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import reportWebVitals from './maintenance/reportWebVitals';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import HomeView from './views/HomeView';
 import ExampleSitesView from './views/ExampleSitesView';
@@ -12,7 +12,29 @@ import NotFoundPageView from './views/NotFoundPageView';
 import './style.scss';
 
 export function App() {
-  return <div className="App">hi</div>;
+  return (
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <HomeView />
+          </Route>
+          <Route path="/example-sites">
+            <ExampleSitesView />
+          </Route>
+          <Route path="/components">
+            <ComponentsView />
+          </Route>
+          <Route path="/docs">
+            <DocsView />
+          </Route>
+          <Route path="*">
+            <NotFoundPageView />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 ReactDOM.render(

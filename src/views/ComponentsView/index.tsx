@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ComponentsView: () => JSX.Element = () => {
-  return <div />;
+  return <div>Components</div>;
 };
 
 export default ComponentsView;
