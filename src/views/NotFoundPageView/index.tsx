@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NotFoundPageView: (() => JSX.Element) = () => {
+const NotFoundPageView: () => JSX.Element = () => {
   return <div />;
 };
 
